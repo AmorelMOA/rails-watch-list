@@ -1,0 +1,11 @@
+<div class="container">
+<h1> "<%= @list.name %>"</h1>
+<% @bookmarks.each do |bookmark| %>
+  <div>
+    <p><%= bookmark.comment %></p>
+    <%= link_to 'delete', bookmark_path(bookmark), turbo_method: :delete  %>
+  </div>
+<% end %>
+ <%# <%= link_to "Add a bookmark", new_list_bookmark_path, class: 'btn btn-primary' %>
+<%= link_to "Back to index", lists_path, class: 'btn btn-primary' %>
+<div>

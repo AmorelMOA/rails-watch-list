@@ -1,0 +1,13 @@
+<div class="container">
+
+      <h1>Create a bookmark</h1>
+      
+      <%= simple_form_for @bookmark do |f| %>
+        <%= f.input :name %>
+        <%= f.submit class: 'btn btn-primary' %>
+      <% end %>
+
+
+
+  <%= link_to "Back to index", lists_path, class: 'btn btn-primary' %>
+</div>
